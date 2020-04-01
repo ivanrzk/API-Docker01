@@ -15,9 +15,9 @@ Ej:
 {
   "nombre" : "prueba5",
   "imagen" : "cirros",
-  "ip" : "172.18.0.33",
+  "ip" : "192.168.0.23",
   "port" : "3500",
-  "volumen" :  "/root/ansible/nodejs/test:/etc"
+  "volumen" :  "/root/test/test:/etc"
 }
 
 ## Borrar contenedor
