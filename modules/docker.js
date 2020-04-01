@@ -1,6 +1,6 @@
 const { exec } = require("child_process");
 
-let listarDocker = (cmd) => {
+let comandos = (cmd) => {
     return new Promise((resolve, reject) => {
         exec(cmd, (error, stdout, stderr) => {
             if (error) {
@@ -20,5 +20,5 @@ let listarDocker = (cmd) => {
     })
 }
 module.exports = {
-    listarDocker
+    comandos
 }
