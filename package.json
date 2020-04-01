@@ -1,0 +1,14 @@
+{
+  "name": "api-docker01",
+  "version": "1.0.0",
+  "description": "API de Manejo de Dockers",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Infraestructura Neuralsoft",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
