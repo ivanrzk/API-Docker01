@@ -1,5 +1,5 @@
-const { exec } = require("child_process");
-
+const { exec } = require("child_process"); //Modulo para ejecutar comandos en shell linux
+//Defino una promesa que usa exec para ejecutar comandos en shell linux
 let comandos = (cmd) => {
     return new Promise((resolve, reject) => {
         exec(cmd, (error, stdout, stderr) => {
