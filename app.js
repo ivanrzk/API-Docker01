@@ -20,7 +20,7 @@ app.get('/api/docker/', (req, res) => {
 app.post('/api/docker/', (req, res) => {
     const nom = req.body.nombre
     const img = req.body.imagen
-    ls.comandos(`docker run --name ${nom} -d ${img}`)
+    docker.comandos(`docker run --name ${nom} -d ${img}`)
     .then(mensaje => res.send(mensaje))
     .catch(mensaje => res.status(400).send(mensaje));
 });
