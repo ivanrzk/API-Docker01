@@ -1,14 +1,14 @@
 # API-Docker01
 API RESTFull para el manejo de Docker
 
-## Metodos definidos
-# Lista de contenedores
+# Metodos definidos
+## Lista de contenedores
 GET /api/docker
 
-# Detalle por contenedor
+## Detalle por contenedor
 GET /api/docker/id
 
-# Crear contenedor
+## Crear contenedor
 POST /api/docker
 Body RAW JSON
 Ej:
@@ -20,5 +20,5 @@ Ej:
   "volumen" :  "/root/ansible/nodejs/test:/etc"
 }
 
-# Borrar contenedor
+## Borrar contenedor
 DELETE /api/docker/id
