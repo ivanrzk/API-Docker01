@@ -1,6 +1,6 @@
 const express = require('express'); 
 const { exec } = require("child_process");
-const ls = require('./modules/docker');
+const docker = require('./modules/docker');
 const app = express();
 
 app.use(express.json());
@@ -12,7 +12,7 @@ app.listen(port, () => {
     console.log(`Escucando en puerto ${port}..`);
 });
 app.get('/api/docker/', (req, res) => {
-    ls.comandos('docker ps')
+    docker.comandos('docker ps')
     .then(mensaje => res.send(mensaje))
     .catch(mensaje => res.status(400).send(mensaje));
 });
