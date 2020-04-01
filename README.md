@@ -2,26 +2,39 @@
 API RESTFull para el manejo de Docker
 
 ## Instalacion
-Instalar nodejs LTS
-curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
-sudo apt-get install -y nodejs
+Instalar nodejs LTS:
+
+  curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
+
+  sudo apt-get install -y nodejs
 
 Clonar repo:
-git clone https://github.com/ivanrzk/API-Docker01.git
-cd API-Docker01/
+  
+  git clone https://github.com/ivanrzk/API-Docker01.git
+  
+  cd API-Docker01/
+  
 Instalar dependencias:
-npm install
+  
+  npm install
 
 Ejecutar APP:
-Usar variable de entorno PORT para elegir el puerto, sino por default escucha en 3000.
-(export PORT="puerto")
-node app.js
+
+  Usar variable de entorno PORT para elegir el puerto, sino por default escucha en 3000.
+
+  (export PORT="puerto")
+
+  node app.js
 
 Nota:
-Instalar nodemon, para debug y no tener que parar y volver a iniciar la app para que tome los cambies, se actualiza en caliente.
-npm install -g nodemon
-Lanzar app:
-nodemon app.js
+
+  Instalar nodemon, para debug y no tener que parar y volver a iniciar la app para que tome los cambies, se actualiza en caliente.
+  
+  npm install -g nodemon
+  
+  Lanzar app:
+  
+  nodemon app.js
 
 # Metodos definidos
 ## Lista de contenedores
@@ -32,8 +45,12 @@ GET /api/docker/id
 
 ## Crear contenedor
 POST /api/docker
+
 Body RAW JSON
+
 Ej:
+
+```html
 {
   "nombre" : "prueba5",
   "imagen" : "cirros",
@@ -41,6 +58,6 @@ Ej:
   "port" : "3500",
   "volumen" :  "/root/test/test:/etc"
 }
-
+```
 ## Borrar contenedor
 DELETE /api/docker/id
