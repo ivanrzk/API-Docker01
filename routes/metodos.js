@@ -5,7 +5,7 @@ const routes = express();
 
 // traigo todos los contenedores ( Interno: Ver bien en podes devolver un json mejor usando jq)
 routes.get('/', (req, res) => {
-    docker.comandos('docker container ls --format="{\\"id\\":\\"{{.ID}}\\",\\"name\\":\\"{{.Names}}\\",\\"Imagen\\":\\"{{.Image}}\\",\\"Ports\\":\\"{{.Ports}}\\",\\"Status\\":\\"{{.Status}}\\"}" --all')
+    docker.comandos('docker container ls --format="{\\"id\\":\\"{{.ID}}\\",\\"name\\":\\"{{.Names}}\\",\\"Imagen\\":\\"{{.Image}}\\",\\"Ports\\":\\"{{.Ports}}\\",\\"Networks\\":\\"{{.Networks}}\\",\\"Status\\":\\"{{.Status}}\\"}" --all')
         .then(mensaje => res.send(mensaje))
         .catch(mensaje => res.status(400).send(mensaje));
 });
