@@ -15,10 +15,12 @@ let comandos = (cmd) => {
             }
             resolve(stdout);
             //res.json(stdout);
-            //console.log(JSON.stringify(stdout));
+            //console.log(stdout);
         }); 
     })
 }
 module.exports = {
     comandos
 }
+
+
