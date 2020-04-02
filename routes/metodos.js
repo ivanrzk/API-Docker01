@@ -26,7 +26,7 @@ routes.post('/', (req, res) => {
     let red = req.body.red
     //Si paso el parametro red, quiere decir que estoy usando Kuryr, y valido los valores requeridos
     if(red){
-        const {error, value} = validarRed2(nom, ip, port, vol, img);
+        const {error, value} = validarRed2(nom, ip, red, vol, img);
         if(error){
             const mensaje = error.details[0].message;
             res.status(400).send(mensaje);
@@ -71,7 +71,7 @@ function validarRed2(nom, ip, red, vol, img){
     const schema = Joi.object({
         nom: Joi.required(),
         ip: Joi.required(),
-        port: Joi.required(),
+        red: Joi.required(),
         vol: Joi.required(),
         img: Joi.required()
     });
