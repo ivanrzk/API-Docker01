@@ -32,7 +32,7 @@ routes.post('/', (req, res) => {
             res.status(400).send(mensaje);
             return;
         }
-        docker.comandos(`docker run --name ${value.nom} --net=${value.red} --ip=${value.img} -v ${value.vol} -d ${value.img}`)
+        docker.comandos(`docker run --name ${value.nom} --net=${value.red} --ip=${value.ip} -v ${value.vol} -d ${value.img}`)
             .then(mensaje => res.send(mensaje))
             .catch(mensaje => res.status(400).send(mensaje));
     } else {
