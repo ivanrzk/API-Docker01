@@ -24,7 +24,7 @@ Ejecutar APP:
 
   (export PORT="puerto")
 
-  node app.js
+  node app.js o npm start
 
 Nota:
 
